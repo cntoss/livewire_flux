@@ -38,6 +38,10 @@ class Password extends Component
 
         $this->reset('current_password', 'password', 'password_confirmation');
 
-        $this->dispatch('password-updated');
+        $this->dispatch('password-updated', [
+            'title' => 'Success!',
+            'message' => 'Your password has been updated.',
+            'type' => 'success'
+        ]);
     }
 }

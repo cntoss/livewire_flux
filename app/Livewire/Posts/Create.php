@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Tasks;
+namespace App\Livewire\Posts;
 
 use App\Models\Post;
 use App\Models\Task;
@@ -22,7 +22,7 @@ class Create extends Component
 
         Post::create($data);
 
-        $this->redirectRoute('tasks.index');
+        $this->redirectRoute('posts.index');
     }
 
     public function render(): View

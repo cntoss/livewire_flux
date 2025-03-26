@@ -6,7 +6,6 @@
             type="text"
             name="title"
             required
-            autofocus
         />
 
         <flux:textarea

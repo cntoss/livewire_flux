@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Livewire\Post;
+namespace App\Livewire\Comments;
 
-use App\Models\Post;
+use App\Models\Comment;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -11,13 +11,13 @@ class Index extends Component
     use WithPagination;
 
     public function delete(int $id){
-        Post::where('id',$id)->delete();
+        Comment::where('id',$id)->delete();
     }
 
     public function render()
     {
-        return view('livewire.posts.index', [
-            'posts' => Post::paginate(10)
+        return view('livewire.comment.index', [
+            'comments' => Comment::paginate(10)
         ]);
     }
 }

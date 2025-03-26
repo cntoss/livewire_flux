@@ -14,13 +14,16 @@
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Platform')" class="grid">
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
+                    <flux:navlist.item icon="newspaper" :href="route('posts.index')" :current="request()->routeIs('posts.*')" wire:navigate>{{ __('Posts') }}</flux:navlist.item>
+                    <flux:navlist.item icon="chat-bubble-left" :href="route('comments.index')" :current="request()->routeIs('comments.*')" wire:navigate>{{ __('Comments') }}</flux:navlist.item>
+                    <flux:navlist.item icon="newspaper" :href="route('blog-posts.index')" :current="request()->routeIs('blog-posts.*')" wire:navigate>{{ __('Traditional Posts') }}</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 
             <flux:spacer />
 
             <flux:navlist variant="outline">
-                <flux:navlist.item icon="folder-git-2" href="https://github.com/laravel/livewire-starter-kit" target="_blank">
+                <flux:navlist.item icon="folder-git-2" href="https://github.com/cntoss/livewire_flux.git" target="_blank">
                 {{ __('Repository') }}
                 </flux:navlist.item>
 

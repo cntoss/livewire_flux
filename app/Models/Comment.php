@@ -12,4 +12,9 @@ class Comment extends Model
         'name',
         'content',
     ];
+
+    public function post()
+    {
+        return $this->belongsTo(Post::class);
+    }
 }
